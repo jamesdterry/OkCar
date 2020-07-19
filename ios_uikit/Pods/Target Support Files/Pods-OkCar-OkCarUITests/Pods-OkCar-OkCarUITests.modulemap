@@ -1,0 +1,6 @@
+framework module Pods_OkCar_OkCarUITests {
+  umbrella header "Pods-OkCar-OkCarUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

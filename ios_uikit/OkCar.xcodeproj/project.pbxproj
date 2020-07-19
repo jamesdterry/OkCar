@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C15AA6F7FA39B5F7A73C0F7 /* Pods_OkCarTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB4B94A982A17F5787B96201 /* Pods_OkCarTests.framework */; };
+		A622A1BCF7B8094A6AB887E0 /* Pods_OkCar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC5C97EAEC73291B2C2BDA63 /* Pods_OkCar.framework */; };
 		A7E2D7A224C3F6B000B39B56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E2D7A124C3F6B000B39B56 /* AppDelegate.swift */; };
 		A7E2D7A624C3F6B000B39B56 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E2D7A524C3F6B000B39B56 /* ViewController.swift */; };
 		A7E2D7A924C3F6B100B39B56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7E2D7A724C3F6B100B39B56 /* Main.storyboard */; };
@@ -14,6 +16,7 @@
 		A7E2D7AE24C3F6B300B39B56 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7E2D7AC24C3F6B300B39B56 /* LaunchScreen.storyboard */; };
 		A7E2D7B924C3F6B300B39B56 /* OkCarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E2D7B824C3F6B300B39B56 /* OkCarTests.swift */; };
 		A7E2D7C424C3F6B300B39B56 /* OkCarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E2D7C324C3F6B300B39B56 /* OkCarUITests.swift */; };
+		BBC8D77E71DF33F4B8B111E9 /* Pods_OkCar_OkCarUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1D62CD3174A42EEF44E64F6 /* Pods_OkCar_OkCarUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3DBCFA285C435A1139F9444E /* Pods-OkCarTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OkCarTests.release.xcconfig"; path = "Target Support Files/Pods-OkCarTests/Pods-OkCarTests.release.xcconfig"; sourceTree = "<group>"; };
+		97C470EE504D10CFEC86E39A /* Pods-OkCar-OkCarUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OkCar-OkCarUITests.debug.xcconfig"; path = "Target Support Files/Pods-OkCar-OkCarUITests/Pods-OkCar-OkCarUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A5F83F5B0634237ACE0B2A5F /* Pods-OkCar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OkCar.release.xcconfig"; path = "Target Support Files/Pods-OkCar/Pods-OkCar.release.xcconfig"; sourceTree = "<group>"; };
 		A7E2D79E24C3F6B000B39B56 /* OkCar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OkCar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7E2D7A124C3F6B000B39B56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A7E2D7A524C3F6B000B39B56 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +53,12 @@
 		A7E2D7BF24C3F6B300B39B56 /* OkCarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OkCarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7E2D7C324C3F6B300B39B56 /* OkCarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OkCarUITests.swift; sourceTree = "<group>"; };
 		A7E2D7C524C3F6B300B39B56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB4B94A982A17F5787B96201 /* Pods_OkCarTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OkCarTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD6947C036A89AD83BEDE5E2 /* Pods-OkCarTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OkCarTests.debug.xcconfig"; path = "Target Support Files/Pods-OkCarTests/Pods-OkCarTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D1D62CD3174A42EEF44E64F6 /* Pods_OkCar_OkCarUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OkCar_OkCarUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBC7B996A2FEC29CF178777C /* Pods-OkCar-OkCarUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OkCar-OkCarUITests.release.xcconfig"; path = "Target Support Files/Pods-OkCar-OkCarUITests/Pods-OkCar-OkCarUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E6BE674517743E27AC2EFE72 /* Pods-OkCar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OkCar.debug.xcconfig"; path = "Target Support Files/Pods-OkCar/Pods-OkCar.debug.xcconfig"; sourceTree = "<group>"; };
+		FC5C97EAEC73291B2C2BDA63 /* Pods_OkCar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OkCar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A622A1BCF7B8094A6AB887E0 /* Pods_OkCar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C15AA6F7FA39B5F7A73C0F7 /* Pods_OkCarTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +82,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBC8D77E71DF33F4B8B111E9 /* Pods_OkCar_OkCarUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		229DC5BBA9CE785A18C27752 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FC5C97EAEC73291B2C2BDA63 /* Pods_OkCar.framework */,
+				D1D62CD3174A42EEF44E64F6 /* Pods_OkCar_OkCarUITests.framework */,
+				AB4B94A982A17F5787B96201 /* Pods_OkCarTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A7E2D79524C3F6B000B39B56 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +106,8 @@
 				A7E2D7B724C3F6B300B39B56 /* OkCarTests */,
 				A7E2D7C224C3F6B300B39B56 /* OkCarUITests */,
 				A7E2D79F24C3F6B000B39B56 /* Products */,
+				CD34234058B55567EF6364E6 /* Pods */,
+				229DC5BBA9CE785A18C27752 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +152,19 @@
 			path = OkCarUITests;
 			sourceTree = "<group>";
 		};
+		CD34234058B55567EF6364E6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E6BE674517743E27AC2EFE72 /* Pods-OkCar.debug.xcconfig */,
+				A5F83F5B0634237ACE0B2A5F /* Pods-OkCar.release.xcconfig */,
+				97C470EE504D10CFEC86E39A /* Pods-OkCar-OkCarUITests.debug.xcconfig */,
+				DBC7B996A2FEC29CF178777C /* Pods-OkCar-OkCarUITests.release.xcconfig */,
+				CD6947C036A89AD83BEDE5E2 /* Pods-OkCarTests.debug.xcconfig */,
+				3DBCFA285C435A1139F9444E /* Pods-OkCarTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +172,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A7E2D7C824C3F6B300B39B56 /* Build configuration list for PBXNativeTarget "OkCar" */;
 			buildPhases = (
+				7FEEA533FA9183AE8176CD47 /* [CP] Check Pods Manifest.lock */,
 				A7E2D79A24C3F6B000B39B56 /* Sources */,
 				A7E2D79B24C3F6B000B39B56 /* Frameworks */,
 				A7E2D79C24C3F6B000B39B56 /* Resources */,
+				5E8ABE3703C798046F81D534 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -149,6 +191,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A7E2D7CB24C3F6B300B39B56 /* Build configuration list for PBXNativeTarget "OkCarTests" */;
 			buildPhases = (
+				379ABC8C87D36505A51F987F /* [CP] Check Pods Manifest.lock */,
 				A7E2D7B024C3F6B300B39B56 /* Sources */,
 				A7E2D7B124C3F6B300B39B56 /* Frameworks */,
 				A7E2D7B224C3F6B300B39B56 /* Resources */,
@@ -167,9 +210,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A7E2D7CE24C3F6B300B39B56 /* Build configuration list for PBXNativeTarget "OkCarUITests" */;
 			buildPhases = (
+				6EFFB88A8E0CD744CA93A791 /* [CP] Check Pods Manifest.lock */,
 				A7E2D7BB24C3F6B300B39B56 /* Sources */,
 				A7E2D7BC24C3F6B300B39B56 /* Frameworks */,
 				A7E2D7BD24C3F6B300B39B56 /* Resources */,
+				054FE31CC66E454A5BB02C2C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -251,6 +296,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		054FE31CC66E454A5BB02C2C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OkCar-OkCarUITests/Pods-OkCar-OkCarUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OkCar-OkCarUITests/Pods-OkCar-OkCarUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OkCar-OkCarUITests/Pods-OkCar-OkCarUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		379ABC8C87D36505A51F987F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OkCarTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5E8ABE3703C798046F81D534 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OkCar/Pods-OkCar-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OkCar/Pods-OkCar-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OkCar/Pods-OkCar-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6EFFB88A8E0CD744CA93A791 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OkCar-OkCarUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7FEEA533FA9183AE8176CD47 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OkCar-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A7E2D79A24C3F6B000B39B56 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -315,6 +463,7 @@
 		A7E2D7C624C3F6B300B39B56 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -375,6 +524,7 @@
 		A7E2D7C724C3F6B300B39B56 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -428,7 +578,9 @@
 		};
 		A7E2D7C924C3F6B300B39B56 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6BE674517743E27AC2EFE72 /* Pods-OkCar.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VPGC7P3T8D;
@@ -446,7 +598,9 @@
 		};
 		A7E2D7CA24C3F6B300B39B56 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5F83F5B0634237ACE0B2A5F /* Pods-OkCar.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VPGC7P3T8D;
@@ -464,8 +618,9 @@
 		};
 		A7E2D7CC24C3F6B300B39B56 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD6947C036A89AD83BEDE5E2 /* Pods-OkCarTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VPGC7P3T8D;
@@ -486,8 +641,9 @@
 		};
 		A7E2D7CD24C3F6B300B39B56 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3DBCFA285C435A1139F9444E /* Pods-OkCarTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VPGC7P3T8D;
@@ -508,8 +664,9 @@
 		};
 		A7E2D7CF24C3F6B300B39B56 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97C470EE504D10CFEC86E39A /* Pods-OkCar-OkCarUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VPGC7P3T8D;
 				INFOPLIST_FILE = OkCarUITests/Info.plist;
@@ -528,8 +685,9 @@
 		};
 		A7E2D7D024C3F6B300B39B56 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DBC7B996A2FEC29CF178777C /* Pods-OkCar-OkCarUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VPGC7P3T8D;
 				INFOPLIST_FILE = OkCarUITests/Info.plist;
