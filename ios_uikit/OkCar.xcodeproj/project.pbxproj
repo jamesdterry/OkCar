@@ -9,12 +9,27 @@
 /* Begin PBXBuildFile section */
 		3C15AA6F7FA39B5F7A73C0F7 /* Pods_OkCarTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB4B94A982A17F5787B96201 /* Pods_OkCarTests.framework */; };
 		A622A1BCF7B8094A6AB887E0 /* Pods_OkCar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC5C97EAEC73291B2C2BDA63 /* Pods_OkCar.framework */; };
+		A7684FB324C4090B0086D921 /* CarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7684FB224C4090B0086D921 /* CarModel.swift */; };
+		A7684FB424C4090B0086D921 /* CarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7684FB224C4090B0086D921 /* CarModel.swift */; };
+		A7684FB524C4090B0086D921 /* CarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7684FB224C4090B0086D921 /* CarModel.swift */; };
+		A7684FB724C4091F0086D921 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7684FB624C4091F0086D921 /* UserModel.swift */; };
+		A7684FB824C4091F0086D921 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7684FB624C4091F0086D921 /* UserModel.swift */; };
+		A7684FB924C4091F0086D921 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7684FB624C4091F0086D921 /* UserModel.swift */; };
+		A7684FBC24C40B6D0086D921 /* OkCarServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7684FBB24C40B6D0086D921 /* OkCarServiceProtocol.swift */; };
+		A7684FBD24C40B6D0086D921 /* OkCarServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7684FBB24C40B6D0086D921 /* OkCarServiceProtocol.swift */; };
+		A7684FBE24C40B6D0086D921 /* OkCarServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7684FBB24C40B6D0086D921 /* OkCarServiceProtocol.swift */; };
+		A7684FC024C40C130086D921 /* SearchFilters.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7684FBF24C40C130086D921 /* SearchFilters.swift */; };
+		A7684FC124C40C130086D921 /* SearchFilters.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7684FBF24C40C130086D921 /* SearchFilters.swift */; };
+		A7684FC224C40C130086D921 /* SearchFilters.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7684FBF24C40C130086D921 /* SearchFilters.swift */; };
+		A7684FC424C40E440086D921 /* OkCarServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7684FC324C40E440086D921 /* OkCarServiceMock.swift */; };
+		A7684FC524C40E440086D921 /* OkCarServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7684FC324C40E440086D921 /* OkCarServiceMock.swift */; };
+		A7684FC624C40E440086D921 /* OkCarServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7684FC324C40E440086D921 /* OkCarServiceMock.swift */; };
+		A7684FC824C4135A0086D921 /* ServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7684FC724C4135A0086D921 /* ServiceTests.swift */; };
 		A7E2D7A224C3F6B000B39B56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E2D7A124C3F6B000B39B56 /* AppDelegate.swift */; };
 		A7E2D7A624C3F6B000B39B56 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E2D7A524C3F6B000B39B56 /* ViewController.swift */; };
 		A7E2D7A924C3F6B100B39B56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7E2D7A724C3F6B100B39B56 /* Main.storyboard */; };
 		A7E2D7AB24C3F6B300B39B56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7E2D7AA24C3F6B300B39B56 /* Assets.xcassets */; };
 		A7E2D7AE24C3F6B300B39B56 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7E2D7AC24C3F6B300B39B56 /* LaunchScreen.storyboard */; };
-		A7E2D7B924C3F6B300B39B56 /* OkCarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E2D7B824C3F6B300B39B56 /* OkCarTests.swift */; };
 		A7E2D7C424C3F6B300B39B56 /* OkCarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E2D7C324C3F6B300B39B56 /* OkCarUITests.swift */; };
 		BBC8D77E71DF33F4B8B111E9 /* Pods_OkCar_OkCarUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1D62CD3174A42EEF44E64F6 /* Pods_OkCar_OkCarUITests.framework */; };
 /* End PBXBuildFile section */
@@ -40,6 +55,12 @@
 		3DBCFA285C435A1139F9444E /* Pods-OkCarTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OkCarTests.release.xcconfig"; path = "Target Support Files/Pods-OkCarTests/Pods-OkCarTests.release.xcconfig"; sourceTree = "<group>"; };
 		97C470EE504D10CFEC86E39A /* Pods-OkCar-OkCarUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OkCar-OkCarUITests.debug.xcconfig"; path = "Target Support Files/Pods-OkCar-OkCarUITests/Pods-OkCar-OkCarUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A5F83F5B0634237ACE0B2A5F /* Pods-OkCar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OkCar.release.xcconfig"; path = "Target Support Files/Pods-OkCar/Pods-OkCar.release.xcconfig"; sourceTree = "<group>"; };
+		A7684FB224C4090B0086D921 /* CarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarModel.swift; sourceTree = "<group>"; };
+		A7684FB624C4091F0086D921 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		A7684FBB24C40B6D0086D921 /* OkCarServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OkCarServiceProtocol.swift; sourceTree = "<group>"; };
+		A7684FBF24C40C130086D921 /* SearchFilters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFilters.swift; sourceTree = "<group>"; };
+		A7684FC324C40E440086D921 /* OkCarServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OkCarServiceMock.swift; sourceTree = "<group>"; };
+		A7684FC724C4135A0086D921 /* ServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceTests.swift; sourceTree = "<group>"; };
 		A7E2D79E24C3F6B000B39B56 /* OkCar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OkCar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7E2D7A124C3F6B000B39B56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A7E2D7A524C3F6B000B39B56 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -48,7 +69,6 @@
 		A7E2D7AD24C3F6B300B39B56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A7E2D7AF24C3F6B300B39B56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7E2D7B424C3F6B300B39B56 /* OkCarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OkCarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A7E2D7B824C3F6B300B39B56 /* OkCarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OkCarTests.swift; sourceTree = "<group>"; };
 		A7E2D7BA24C3F6B300B39B56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7E2D7BF24C3F6B300B39B56 /* OkCarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OkCarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7E2D7C324C3F6B300B39B56 /* OkCarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OkCarUITests.swift; sourceTree = "<group>"; };
@@ -99,6 +119,25 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A7684FB124C408B80086D921 /* StorageLayer */ = {
+			isa = PBXGroup;
+			children = (
+				A7684FB224C4090B0086D921 /* CarModel.swift */,
+				A7684FB624C4091F0086D921 /* UserModel.swift */,
+			);
+			path = StorageLayer;
+			sourceTree = "<group>";
+		};
+		A7684FBA24C40B4A0086D921 /* ServiceLayer */ = {
+			isa = PBXGroup;
+			children = (
+				A7684FBB24C40B6D0086D921 /* OkCarServiceProtocol.swift */,
+				A7684FBF24C40C130086D921 /* SearchFilters.swift */,
+				A7684FC324C40E440086D921 /* OkCarServiceMock.swift */,
+			);
+			path = ServiceLayer;
+			sourceTree = "<group>";
+		};
 		A7E2D79524C3F6B000B39B56 = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +163,8 @@
 		A7E2D7A024C3F6B000B39B56 /* OkCar */ = {
 			isa = PBXGroup;
 			children = (
+				A7684FBA24C40B4A0086D921 /* ServiceLayer */,
+				A7684FB124C408B80086D921 /* StorageLayer */,
 				A7E2D7A124C3F6B000B39B56 /* AppDelegate.swift */,
 				A7E2D7A524C3F6B000B39B56 /* ViewController.swift */,
 				A7E2D7A724C3F6B100B39B56 /* Main.storyboard */,
@@ -137,7 +178,7 @@
 		A7E2D7B724C3F6B300B39B56 /* OkCarTests */ = {
 			isa = PBXGroup;
 			children = (
-				A7E2D7B824C3F6B300B39B56 /* OkCarTests.swift */,
+				A7684FC724C4135A0086D921 /* ServiceTests.swift */,
 				A7E2D7BA24C3F6B300B39B56 /* Info.plist */,
 			);
 			path = OkCarTests;
@@ -405,7 +446,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7E2D7A624C3F6B000B39B56 /* ViewController.swift in Sources */,
+				A7684FC024C40C130086D921 /* SearchFilters.swift in Sources */,
 				A7E2D7A224C3F6B000B39B56 /* AppDelegate.swift in Sources */,
+				A7684FB724C4091F0086D921 /* UserModel.swift in Sources */,
+				A7684FBC24C40B6D0086D921 /* OkCarServiceProtocol.swift in Sources */,
+				A7684FB324C4090B0086D921 /* CarModel.swift in Sources */,
+				A7684FC424C40E440086D921 /* OkCarServiceMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,7 +459,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7E2D7B924C3F6B300B39B56 /* OkCarTests.swift in Sources */,
+				A7684FC124C40C130086D921 /* SearchFilters.swift in Sources */,
+				A7684FBD24C40B6D0086D921 /* OkCarServiceProtocol.swift in Sources */,
+				A7684FB424C4090B0086D921 /* CarModel.swift in Sources */,
+				A7684FB824C4091F0086D921 /* UserModel.swift in Sources */,
+				A7684FC524C40E440086D921 /* OkCarServiceMock.swift in Sources */,
+				A7684FC824C4135A0086D921 /* ServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,7 +472,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7684FC224C40C130086D921 /* SearchFilters.swift in Sources */,
+				A7684FBE24C40B6D0086D921 /* OkCarServiceProtocol.swift in Sources */,
+				A7684FB524C4090B0086D921 /* CarModel.swift in Sources */,
+				A7684FB924C4091F0086D921 /* UserModel.swift in Sources */,
 				A7E2D7C424C3F6B300B39B56 /* OkCarUITests.swift in Sources */,
+				A7684FC624C40E440086D921 /* OkCarServiceMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -625,7 +681,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VPGC7P3T8D;
 				INFOPLIST_FILE = OkCarTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -648,7 +704,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VPGC7P3T8D;
 				INFOPLIST_FILE = OkCarTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
