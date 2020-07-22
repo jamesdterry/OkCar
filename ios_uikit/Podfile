@@ -1,0 +1,19 @@
+platform :ios, '11.0'
+
+target 'OkCar' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for OkCar
+  pod 'Alamofire', '~> 5.2', :inhibit_warnings => true
+  
+  target 'OkCarTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'OkCarUITests' do
+    # Pods for testing
+  end
+
+end
