@@ -132,7 +132,7 @@ class ServiceTests: XCTestCase {
 
         service.getCars(filter: filters, llat: 41.0, llong: -83.0, count: 100, offset: 0) { (result) in
             if case .failure = result {
-                XCTAssert(false, "getApartments should succeed")
+                XCTAssert(false, "getCars should succeed")
                 return
             }
             do {
@@ -180,7 +180,7 @@ class ServiceTests: XCTestCase {
 
         service.getCars(filter: filters, llat: 41.0, llong: -83.0, count: 100, offset: 0) { (result) in
             if case .failure = result {
-                XCTAssert(false, "getApartments should succeed")
+                XCTAssert(false, "getCars should succeed")
                 return
             }
             do {
@@ -218,7 +218,7 @@ class ServiceTests: XCTestCase {
 
         service.getCars(filter: filters, llat: 41.0, llong: -83.0, count: 100, offset: 0) { (result) in
             if case .failure = result {
-                XCTAssert(false, "getApartments should succeed")
+                XCTAssert(false, "getCars should succeed")
                 return
             }
             do {
