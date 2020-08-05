@@ -20,6 +20,9 @@ class OkCarServiceMock: OkCarServiceProtocol {
         let user2 = UserModel(storageId: randomString(12), email: "test2@test.com")
         userDict[user2.storageId!] = user2
 
+        let user3 = UserModel(storageId: randomString(12), email: "test3@test.com")
+        userDict[user3.storageId!] = user3
+
         for i in 1...2 {
             let userN = UserModel(storageId:randomString(12),
                                   email: "user\(i)@mock.com")
@@ -53,6 +56,20 @@ class OkCarServiceMock: OkCarServiceProtocol {
                             llong: -83.1)
         
         carDict[car2.storageId!] = car2
+        
+        let car3 = CarModel(storageId: randomString(12),
+                            seller: user3,
+                            make: "Tesla",
+                            model: "Models S",
+                            type: "Sedan",
+                            color: "Blue",
+                            description: "Turn heads with this ecologically friendly vehicle.",
+                            mileage: 21444,
+                            price: 64999,
+                            llat: 41.2,
+                            llong: -83.2)
+        
+        carDict[car3.storageId!] = car3
         
         // Optionally have someone logged in
         let mockUserName = UserDefaults.standard.string(forKey: "mock-user")?.lowercased()

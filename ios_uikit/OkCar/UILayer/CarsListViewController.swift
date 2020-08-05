@@ -24,10 +24,20 @@ class CarsListViewController: UIViewController {
     private let activityIndicatorView = UIActivityIndicatorView()
     private let noPermissionLabel = UILabel()
     private let noResultsLabel = UILabel()
-    private let carsTableView = UITableView()
+    private var carsCollectionView: UICollectionView!
     private let refreshControl = UIRefreshControl()
     private let filterView = FilterView()
     private var currentLocation = CLLocation()
+    
+    private var flowLayout: UICollectionViewFlowLayout {
+        let _flowLayout = UICollectionViewFlowLayout()
+
+        //_flowLayout.sectionInset = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
+        _flowLayout.scrollDirection = UICollectionView.ScrollDirection.vertical
+        _flowLayout.minimumInteritemSpacing = 0.0
+
+        return _flowLayout
+    }
     
     init(container: Container) {
         self.container = container
@@ -78,20 +88,21 @@ class CarsListViewController: UIViewController {
         
         refreshControl.addTarget(self, action: #selector(handleRefreshControl), for: .valueChanged)
         
-        carsTableView.rowHeight = UITableView.automaticDimension
-        carsTableView.estimatedRowHeight = 100
-        carsTableView.separatorStyle = .singleLine
-        carsTableView.separatorInset = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 0.0)
-        carsTableView.delegate = self
-        carsTableView.dataSource = self
-        carsTableView.translatesAutoresizingMaskIntoConstraints = false
-        self.view.addSubview(carsTableView)
-        carsTableView.autoPinEdge(.top, to: .bottom, of: filterView)
-        carsTableView.autoPinEdge(toSuperviewMargin: .left, withInset: 0)
-        carsTableView.autoPinEdge(toSuperviewMargin: .right, withInset: 0)
-        carsTableView.refreshControl = refreshControl
+        //carsCollectionView.rowHeight = UITableView.automaticDimension
+        //carsCollectionView.estimatedRowHeight = 100
+        //carsCollectionView.separatorStyle = .singleLine
+        //carsCollectionView.separatorInset = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 0.0)
+        carsCollectionView = UICollectionView(frame:CGRect(), collectionViewLayout: flowLayout)
+        carsCollectionView.delegate = self
+        carsCollectionView.dataSource = self
+        carsCollectionView.translatesAutoresizingMaskIntoConstraints = false
+        self.view.addSubview(carsCollectionView)
+        carsCollectionView.autoPinEdge(.top, to: .bottom, of: filterView)
+        carsCollectionView.autoPinEdge(toSuperviewMargin: .left, withInset: 0)
+        carsCollectionView.autoPinEdge(toSuperviewMargin: .right, withInset: 0)
+        carsCollectionView.refreshControl = refreshControl
         
-        carsTableView.register(CarTableViewCell.self, forCellReuseIdentifier: String(describing: CarTableViewCell.self))
+        carsCollectionView.register(CarCollectionViewCell.self, forCellWithReuseIdentifier: String(describing: CarCollectionViewCell.self))
 
         noResultsLabel.translatesAutoresizingMaskIntoConstraints = false
         noResultsLabel.text = "No Cars"
@@ -110,7 +121,7 @@ class CarsListViewController: UIViewController {
         noPermissionLabel.autoPinEdge(toSuperviewSafeArea: .bottom)
         noPermissionLabel.isHidden = true
         
-        carsTableView.autoPinEdge(.bottom, to: .top, of: noPermissionLabel, withOffset: 0)
+        carsCollectionView.autoPinEdge(.bottom, to: .top, of: noPermissionLabel, withOffset: 0)
 
         activityIndicatorView.translatesAutoresizingMaskIntoConstraints = false
         activityIndicatorView.hidesWhenStopped = true
@@ -124,9 +135,9 @@ class CarsListViewController: UIViewController {
     }
 
     fileprivate func updateTableWithCars() {
-        self.carsTableView.reloadData()
+        self.carsCollectionView.reloadData()
         self.noResultsLabel.isHidden = self.viewModel.cars.count != 0
-        self.carsTableView.isHidden = self.viewModel.cars.count == 0
+        self.carsCollectionView.isHidden = self.viewModel.cars.count == 0
     }
     
     fileprivate func reloadCars(fromRefresh: Bool) {
@@ -188,27 +199,25 @@ class CarsListViewController: UIViewController {
     }
 }
 
-extension CarsListViewController: UITableViewDataSource {
-
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+extension CarsListViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return viewModel.cars.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let row = indexPath.row
         
         self.viewModel.access(row: row)
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: CarTableViewCell.self), for: indexPath) as! CarTableViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: CarCollectionViewCell.self), for: indexPath) as! CarCollectionViewCell
         cell.bind(viewModel, row:row)
         
         return cell
     }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.cars.count
-    }
 }
 
-
-extension CarsListViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+extension CarsListViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let row = indexPath.row
         
         let detailViewController = container.makeCarDetailViewController(for: viewModel.cars[row])
@@ -216,10 +225,27 @@ extension CarsListViewController: UITableViewDelegate {
         self.navigationController?.pushViewController(detailViewController, animated:true)
     }
     
-    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
-        return .none
+}
+
+extension CarsListViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let row = indexPath.row
+        
+        let pos = row % 3
+        
+        var width:CGFloat
+        
+        if (pos == 2) {
+            width = collectionView.frame.size.width
+        } else {
+            width = collectionView.frame.size.width / 2.0
+        }
+        
+        let height = (width * 2.0) / 3.0
+
+        return CGSize(width: width, height: height)
+
     }
-    
 }
 
 extension CarsListViewController: FilterViewDelegate {
