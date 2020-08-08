@@ -1,6 +1,9 @@
 PODS:
   - Alamofire (5.2.2)
   - DLRadioButton (1.4.12)
+  - Kingfisher (5.14.1):
+    - Kingfisher/Core (= 5.14.1)
+  - Kingfisher/Core (5.14.1)
   - MaterialTextField (1.0.1)
   - PureLayout (3.1.5)
   - SwiftyJSON (4.3.0)
@@ -8,6 +11,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 5.2)
   - DLRadioButton (~> 1.4)
+  - Kingfisher (~> 5.0)
   - MaterialTextField (~> 1.0)
   - PureLayout (~> 3.0)
   - SwiftyJSON (~> 4.0)
@@ -16,6 +20,7 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - DLRadioButton
+    - Kingfisher
     - MaterialTextField
     - PureLayout
     - SwiftyJSON
@@ -23,10 +28,11 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
   DLRadioButton: d7c4e225ed0e8013cef7be61455230c7557ad7c1
+  Kingfisher: 8050bc6f7f68cbf3908bd04df7ccbac188f6d6d6
   MaterialTextField: f1a0786588e4d3610cb9bb62d2adbe9777cebbf9
   PureLayout: 9b4ad47b2f0388c84ff534af23d96e720c1b875a
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
 
-PODFILE CHECKSUM: 9f06e0e2c047b9921233ee47829758447e43173f
+PODFILE CHECKSUM: 4cd27c92b0b88417e4600c176344ee6472554267
 
 COCOAPODS: 1.9.3

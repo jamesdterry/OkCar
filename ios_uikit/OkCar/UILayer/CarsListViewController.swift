@@ -241,7 +241,7 @@ extension CarsListViewController: UICollectionViewDelegateFlowLayout {
             width = collectionView.frame.size.width / 2.0
         }
         
-        let height = (width * 2.0) / 3.0
+        let height = (width * 3.0) / 2.0
 
         return CGSize(width: width, height: height)
 

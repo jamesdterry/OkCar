@@ -81,6 +81,8 @@
 		A76B0B3C24DEFBC8008F665F /* FilterSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7684FFE24CD42DB0086D921 /* FilterSheetViewController.swift */; };
 		A76B0B3D24DEFBD4008F665F /* CarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7443B5B24DA0F08009E9592 /* CarCollectionViewCell.swift */; };
 		A76B0B3E24DEFBE2008F665F /* CarDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7684FF524CD3B980086D921 /* CarDetailView.swift */; };
+		A76B0B3F24DF0A08008F665F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7E2D7AA24C3F6B300B39B56 /* Assets.xcassets */; };
+		A76B0B4024DF0A09008F665F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7E2D7AA24C3F6B300B39B56 /* Assets.xcassets */; };
 		A7E2D7A224C3F6B000B39B56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E2D7A124C3F6B000B39B56 /* AppDelegate.swift */; };
 		A7E2D7A624C3F6B000B39B56 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E2D7A524C3F6B000B39B56 /* ViewController.swift */; };
 		A7E2D7A924C3F6B100B39B56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7E2D7A724C3F6B100B39B56 /* Main.storyboard */; };
@@ -451,6 +453,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A76B0B3F24DF0A08008F665F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,6 +461,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A76B0B4024DF0A09008F665F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -235,6 +235,7 @@ class AddEditCarViewController: ScrollableContentViewController {
                         model: model,
                         type: "",
                         color: "",
+                        location: "",
                         description: description,
                         mileage: 0,
                         price: price,

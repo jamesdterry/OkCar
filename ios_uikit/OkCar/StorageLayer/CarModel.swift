@@ -15,6 +15,7 @@ struct CarModel: Equatable {
     let model: String
     let type: String
     let color: String
+    let location: String
     let description: String
     let mileage: Int
     let price: Int

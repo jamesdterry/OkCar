@@ -35,6 +35,7 @@ class OkCarServiceMock: OkCarServiceProtocol {
                             model: "CR-V",
                             type: "SUV",
                             color: "Silver",
+                            location: "Portsmouth, NH",
                             description: "Just traded is this nice low mileage 2018 Honda CR-V LX AWD in Lunar Silver over Gray Cloth",
                             mileage: 30442,
                             price: 18999,
@@ -50,6 +51,7 @@ class OkCarServiceMock: OkCarServiceProtocol {
                             model: "F150",
                             type: "Truck",
                             color: "Black",
+                            location: "Salem, NH",
                             description: "A real workhorse, brand new tires and just passed inspection.",
                             mileage: 162200,
                             price: 4500,
@@ -65,12 +67,13 @@ class OkCarServiceMock: OkCarServiceProtocol {
                             model: "Models S",
                             type: "Sedan",
                             color: "Blue",
+                            location: "Rochester, NH",
                             description: "Turn heads with this ecologically friendly vehicle.",
                             mileage: 21444,
                             price: 64999,
                             llat: 41.2,
                             llong: -83.2,
-                            media: ["https://jamesdterry.github.io/OkCar/img/honda_crv.jpg"])
+                            media: ["https://jamesdterry.github.io/OkCar/img/tesla.jpg"])
         
         carDict[car3.storageId!] = car3
         
@@ -209,6 +212,7 @@ class OkCarServiceMock: OkCarServiceProtocol {
                                 model: car.model,
                                 type: car.type,
                                 color: car.color,
+                                location: car.location,
                                 description: car.description,
                                 mileage: car.mileage,
                                 price: car.price,

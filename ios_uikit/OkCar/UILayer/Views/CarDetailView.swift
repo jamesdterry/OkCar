@@ -8,11 +8,14 @@
 
 import UIKit
 import PureLayout
+import Kingfisher
 
 class CarDetailView: UIView {
     let makeModelLabel = UILabel()
-    let descriptionLabel = UILabel()
+    let locationLabel = UILabel()
     let priceLabel = UILabel()
+    let mileageLabel = UILabel()
+    let mainUIImage = UIImageView()
 
     private lazy var currencyFormatter: NumberFormatter = {
         let formatter = NumberFormatter()
@@ -22,16 +25,23 @@ class CarDetailView: UIView {
         return formatter
     }()
 
+    private lazy var mileageFormatter: NumberFormatter = {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        formatter.maximumFractionDigits = 0
+        
+        return formatter
+    }()
+    
     init() {
         super.init(frame: UIScreen.main.bounds)
         
-        let fieldsStack = UIStackView()
-        fieldsStack.translatesAutoresizingMaskIntoConstraints = false
-        fieldsStack.axis = .vertical
-        fieldsStack.spacing = 4
-        addSubview(fieldsStack)
-        
-        fieldsStack.autoPinEdgesToSuperviewMargins()
+        mainUIImage.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(mainUIImage)
+        mainUIImage.autoPinEdge(toSuperviewMargin: .top)
+        mainUIImage.autoPinEdge(toSuperviewMargin: .leading)
+        mainUIImage.autoPinEdge(toSuperviewMargin: .trailing)
+        mainUIImage.autoMatch(.height, to: .width, of: mainUIImage, withMultiplier: 2.0/3.0, relation: .equal)
         
         makeModelLabel.translatesAutoresizingMaskIntoConstraints = false
         makeModelLabel.font = UIFont.preferredFont(forTextStyle: .title3)
@@ -42,19 +52,24 @@ class CarDetailView: UIView {
             makeModelLabel.textColor = .labelColorPre13
         }
         makeModelLabel.textAlignment = .left
-        fieldsStack.addArrangedSubview(makeModelLabel)
+        addSubview(makeModelLabel)
+        makeModelLabel.autoPinEdge(.top, to: .bottom, of: mainUIImage)
+        makeModelLabel.autoPinEdge(toSuperviewMargin: .leading)
         
-        descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
-        descriptionLabel.font = UIFont.preferredFont(forTextStyle: .body)
-        descriptionLabel.adjustsFontForContentSizeCategory = true
+        locationLabel.translatesAutoresizingMaskIntoConstraints = false
+        locationLabel.font = UIFont.preferredFont(forTextStyle: .body)
+        locationLabel.adjustsFontForContentSizeCategory = true
         if #available(iOS 13.0, *) {
-            descriptionLabel.textColor = .label
+            locationLabel.textColor = .label
         } else {
-            descriptionLabel.textColor = .labelColorPre13
+            locationLabel.textColor = .labelColorPre13
         }
-        descriptionLabel.textAlignment = .left
-        fieldsStack.addArrangedSubview(descriptionLabel)
-        
+        locationLabel.textAlignment = .left
+        addSubview(locationLabel)
+        locationLabel.autoPinEdge(.top, to: .bottom, of: makeModelLabel)
+        locationLabel.autoPinEdge(toSuperviewMargin: .leading)
+        //descriptionLabel.autoPinEdge(toSuperviewMargin: .bottom)
+
         priceLabel.translatesAutoresizingMaskIntoConstraints = false
         priceLabel.font = UIFont.preferredFont(forTextStyle: .body)
         priceLabel.adjustsFontForContentSizeCategory = true
@@ -63,8 +78,27 @@ class CarDetailView: UIView {
         } else {
             priceLabel.textColor = .labelColorPre13
         }
-        priceLabel.textAlignment = .left
-        fieldsStack.addArrangedSubview(priceLabel)
+        priceLabel.textAlignment = .right
+        addSubview(priceLabel)
+        priceLabel.autoPinEdge(.top, to: .bottom, of: mainUIImage)
+        priceLabel.autoPinEdge(toSuperviewMargin: .trailing)
+        
+        makeModelLabel.autoAlignAxis(.horizontal, toSameAxisOf: priceLabel)
+        
+        mileageLabel.translatesAutoresizingMaskIntoConstraints = false
+        mileageLabel.font = UIFont.preferredFont(forTextStyle: .body)
+        mileageLabel.adjustsFontForContentSizeCategory = true
+        if #available(iOS 13.0, *) {
+            mileageLabel.textColor = .label
+        } else {
+            mileageLabel.textColor = .labelColorPre13
+        }
+        mileageLabel.textAlignment = .right
+        addSubview(mileageLabel)
+        mileageLabel.autoPinEdge(.top, to: .bottom, of: priceLabel)
+        mileageLabel.autoPinEdge(toSuperviewMargin: .trailing)
+        
+        locationLabel.autoAlignAxis(.horizontal, toSameAxisOf: mileageLabel)
     }
 
     @available(*, unavailable)
@@ -73,8 +107,31 @@ class CarDetailView: UIView {
     }
 
     func bind(_ car: CarModel) {
+        let url = URL(string: car.media[0])
+        let processor = DownsamplingImageProcessor(size: self.bounds.size)
+                     |> RoundCornerImageProcessor(cornerRadius: 20)
+        mainUIImage.kf.indicatorType = .activity
+        mainUIImage.kf.setImage(
+            with: url,
+            placeholder: UIImage(named: "placeholder"),
+            options: [
+                .processor(processor),
+                .scaleFactor(UIScreen.main.scale),
+                .transition(.fade(1)),
+                .cacheOriginalImage
+            ])
+        {
+            result in
+            switch result {
+            case .success(let value):
+                print("Task done for: \(value.source.url?.absoluteString ?? "")")
+            case .failure(let error):
+                print("Job failed: \(error.localizedDescription)")
+            }
+        }
+        
         makeModelLabel.text = "\(car.make) \(car.model)"
-        descriptionLabel.text = car.description
+        locationLabel.text = car.location
         
         var carPriceString = "$\(car.price)"
         if let formattedNumber = currencyFormatter.string(from: NSNumber(value: car.price)) {
@@ -82,5 +139,12 @@ class CarDetailView: UIView {
         }
 
         priceLabel.text = carPriceString
+        
+        var carMileageString = "$\(car.mileage)"
+        if let formattedNumber = mileageFormatter.string(from: NSNumber(value: car.mileage)) {
+            carMileageString = formattedNumber
+        }
+        
+        mileageLabel.text = carMileageString
     }
 }
