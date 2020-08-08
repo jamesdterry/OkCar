@@ -40,7 +40,7 @@ class OkCarServiceMock: OkCarServiceProtocol {
                             price: 18999,
                             llat: 41.0,
                             llong: -83.0,
-                            media: [""])
+                            media: ["https://jamesdterry.github.io/OkCar/img/honda_crv.jpg"])
         
         carDict[car1.storageId!] = car1
         
@@ -54,7 +54,8 @@ class OkCarServiceMock: OkCarServiceProtocol {
                             mileage: 162200,
                             price: 4500,
                             llat: 41.1,
-                            llong: -83.1)
+                            llong: -83.1,
+                            media: ["https://jamesdterry.github.io/OkCar/img/ford_f150.jpg"])
         
         carDict[car2.storageId!] = car2
         
@@ -68,7 +69,8 @@ class OkCarServiceMock: OkCarServiceProtocol {
                             mileage: 21444,
                             price: 64999,
                             llat: 41.2,
-                            llong: -83.2)
+                            llong: -83.2,
+                            media: ["https://jamesdterry.github.io/OkCar/img/honda_crv.jpg"])
         
         carDict[car3.storageId!] = car3
         
@@ -211,7 +213,8 @@ class OkCarServiceMock: OkCarServiceProtocol {
                                 mileage: car.mileage,
                                 price: car.price,
                                 llat: car.llat,
-                                llong: car.llong)
+                                llong: car.llong,
+                                media: car.media)
         
         carDict[addedCar.storageId!] = addedCar
         completion(.success(addedCar))

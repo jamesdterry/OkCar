@@ -137,7 +137,7 @@ class ServiceTests: XCTestCase {
             }
             do {
                 if let cars = try result.get() {
-                    XCTAssert(cars.count == 2, "Car count wrong")
+                    XCTAssert(cars.count == 3, "Car count wrong")
                     let car0 = cars[0]
                     XCTAssert(car0.make == "Honda")
                     XCTAssert(car0.model == "CR-V")

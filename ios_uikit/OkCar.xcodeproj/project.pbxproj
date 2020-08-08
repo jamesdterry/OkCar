@@ -65,6 +65,22 @@
 		A768500024CD42DB0086D921 /* FilterSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7684FFE24CD42DB0086D921 /* FilterSheetViewController.swift */; };
 		A768500224CD47360086D921 /* CarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A768500124CD47360086D921 /* CarTableViewCell.swift */; };
 		A768500324CD47360086D921 /* CarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A768500124CD47360086D921 /* CarTableViewCell.swift */; };
+		A76B0B2E24DEFA9E008F665F /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7684FDA24CD2FC60086D921 /* SignInViewController.swift */; };
+		A76B0B2F24DEFAD6008F665F /* ScrollableContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7684FDD24CD31760086D921 /* ScrollableContentViewController.swift */; };
+		A76B0B3024DEFAED008F665F /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7684FE724CD370D0086D921 /* CreateAccountViewController.swift */; };
+		A76B0B3124DEFAFC008F665F /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7684FE124CD33FD0086D921 /* UIColor+Extension.swift */; };
+		A76B0B3224DEFB0C008F665F /* CarsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7684FEA24CD38170086D921 /* CarsListViewController.swift */; };
+		A76B0B3324DEFB19008F665F /* CarsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7684FEE24CD38A70086D921 /* CarsViewModel.swift */; };
+		A76B0B3424DEFB25008F665F /* CarDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7684FF124CD3A0A0086D921 /* CarDetailViewController.swift */; };
+		A76B0B3524DEFB36008F665F /* AddEditCarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7684FF824CD3D600086D921 /* AddEditCarViewController.swift */; };
+		A76B0B3724DEFB66008F665F /* OkCarServiceRest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76B0B3624DEFB66008F665F /* OkCarServiceRest.swift */; };
+		A76B0B3824DEFB66008F665F /* OkCarServiceRest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76B0B3624DEFB66008F665F /* OkCarServiceRest.swift */; };
+		A76B0B3924DEFB66008F665F /* OkCarServiceRest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76B0B3624DEFB66008F665F /* OkCarServiceRest.swift */; };
+		A76B0B3A24DEFBAB008F665F /* UIViewController+ShowError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7684FE424CD36850086D921 /* UIViewController+ShowError.swift */; };
+		A76B0B3B24DEFBBA008F665F /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7684FFB24CD40AE0086D921 /* FilterView.swift */; };
+		A76B0B3C24DEFBC8008F665F /* FilterSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7684FFE24CD42DB0086D921 /* FilterSheetViewController.swift */; };
+		A76B0B3D24DEFBD4008F665F /* CarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7443B5B24DA0F08009E9592 /* CarCollectionViewCell.swift */; };
+		A76B0B3E24DEFBE2008F665F /* CarDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7684FF524CD3B980086D921 /* CarDetailView.swift */; };
 		A7E2D7A224C3F6B000B39B56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E2D7A124C3F6B000B39B56 /* AppDelegate.swift */; };
 		A7E2D7A624C3F6B000B39B56 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E2D7A524C3F6B000B39B56 /* ViewController.swift */; };
 		A7E2D7A924C3F6B100B39B56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7E2D7A724C3F6B100B39B56 /* Main.storyboard */; };
@@ -119,6 +135,7 @@
 		A7684FFB24CD40AE0086D921 /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
 		A7684FFE24CD42DB0086D921 /* FilterSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterSheetViewController.swift; sourceTree = "<group>"; };
 		A768500124CD47360086D921 /* CarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarTableViewCell.swift; sourceTree = "<group>"; };
+		A76B0B3624DEFB66008F665F /* OkCarServiceRest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OkCarServiceRest.swift; sourceTree = "<group>"; };
 		A7E2D79E24C3F6B000B39B56 /* OkCar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OkCar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7E2D7A124C3F6B000B39B56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A7E2D7A524C3F6B000B39B56 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -195,6 +212,7 @@
 				A7684FC924CD27A70086D921 /* OkCarLocationProtocol.swift */,
 				A7684FCD24CD28D00086D921 /* AppleLocation.swift */,
 				A7684FD124CD29420086D921 /* MockLocation.swift */,
+				A76B0B3624DEFB66008F665F /* OkCarServiceRest.swift */,
 			);
 			path = ServiceLayer;
 			sourceTree = "<group>";
@@ -575,6 +593,7 @@
 				A7684FDB24CD2FC60086D921 /* SignInViewController.swift in Sources */,
 				A7684FBC24C40B6D0086D921 /* OkCarServiceProtocol.swift in Sources */,
 				A7684FB324C4090B0086D921 /* CarModel.swift in Sources */,
+				A76B0B3724DEFB66008F665F /* OkCarServiceRest.swift in Sources */,
 				A7684FF624CD3B980086D921 /* CarDetailView.swift in Sources */,
 				A7684FC424C40E440086D921 /* OkCarServiceMock.swift in Sources */,
 				A7684FF924CD3D600086D921 /* AddEditCarViewController.swift in Sources */,
@@ -585,16 +604,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A76B0B2E24DEFA9E008F665F /* SignInViewController.swift in Sources */,
+				A76B0B3224DEFB0C008F665F /* CarsListViewController.swift in Sources */,
+				A76B0B2F24DEFAD6008F665F /* ScrollableContentViewController.swift in Sources */,
+				A76B0B3324DEFB19008F665F /* CarsViewModel.swift in Sources */,
+				A76B0B3A24DEFBAB008F665F /* UIViewController+ShowError.swift in Sources */,
 				A7684FC124C40C130086D921 /* SearchFilters.swift in Sources */,
+				A76B0B3C24DEFBC8008F665F /* FilterSheetViewController.swift in Sources */,
 				A7684FCF24CD28D00086D921 /* AppleLocation.swift in Sources */,
+				A76B0B3B24DEFBBA008F665F /* FilterView.swift in Sources */,
+				A76B0B3D24DEFBD4008F665F /* CarCollectionViewCell.swift in Sources */,
+				A76B0B3E24DEFBE2008F665F /* CarDetailView.swift in Sources */,
 				A7684FBD24C40B6D0086D921 /* OkCarServiceProtocol.swift in Sources */,
+				A76B0B3024DEFAED008F665F /* CreateAccountViewController.swift in Sources */,
 				A7684FCB24CD27A70086D921 /* OkCarLocationProtocol.swift in Sources */,
+				A76B0B3124DEFAFC008F665F /* UIColor+Extension.swift in Sources */,
 				A7684FD324CD29420086D921 /* MockLocation.swift in Sources */,
+				A76B0B3524DEFB36008F665F /* AddEditCarViewController.swift in Sources */,
+				A76B0B3424DEFB25008F665F /* CarDetailViewController.swift in Sources */,
 				A7684FB424C4090B0086D921 /* CarModel.swift in Sources */,
 				A7684FD724CD2CA80086D921 /* DependencyContainer.swift in Sources */,
 				A7684FB824C4091F0086D921 /* UserModel.swift in Sources */,
 				A7684FC524C40E440086D921 /* OkCarServiceMock.swift in Sources */,
 				A7684FC824C4135A0086D921 /* ServiceTests.swift in Sources */,
+				A76B0B3824DEFB66008F665F /* OkCarServiceRest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -617,6 +650,7 @@
 				A768500324CD47360086D921 /* CarTableViewCell.swift in Sources */,
 				A7684FD824CD2CA80086D921 /* DependencyContainer.swift in Sources */,
 				A7684FB924C4091F0086D921 /* UserModel.swift in Sources */,
+				A76B0B3924DEFB66008F665F /* OkCarServiceRest.swift in Sources */,
 				A7684FEC24CD38170086D921 /* CarsListViewController.swift in Sources */,
 				A7684FFA24CD3D600086D921 /* AddEditCarViewController.swift in Sources */,
 				A7684FF024CD38A70086D921 /* CarsViewModel.swift in Sources */,

@@ -239,7 +239,8 @@ class AddEditCarViewController: ScrollableContentViewController {
                         mileage: 0,
                         price: price,
                         llat: 0,
-                        llong: 0)
+                        llong: 0,
+                        media: [])
                     
     }
     
