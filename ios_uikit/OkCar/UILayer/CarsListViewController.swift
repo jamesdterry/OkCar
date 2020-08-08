@@ -32,8 +32,9 @@ class CarsListViewController: UIViewController {
     private var flowLayout: UICollectionViewFlowLayout {
         let _flowLayout = UICollectionViewFlowLayout()
 
-        //_flowLayout.sectionInset = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
+        _flowLayout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         _flowLayout.scrollDirection = UICollectionView.ScrollDirection.vertical
+        _flowLayout.minimumLineSpacing = 0.0
         _flowLayout.minimumInteritemSpacing = 0.0
 
         return _flowLayout
@@ -88,14 +89,15 @@ class CarsListViewController: UIViewController {
         
         refreshControl.addTarget(self, action: #selector(handleRefreshControl), for: .valueChanged)
         
-        //carsCollectionView.rowHeight = UITableView.automaticDimension
-        //carsCollectionView.estimatedRowHeight = 100
-        //carsCollectionView.separatorStyle = .singleLine
-        //carsCollectionView.separatorInset = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 0.0)
         carsCollectionView = UICollectionView(frame:CGRect(), collectionViewLayout: flowLayout)
         carsCollectionView.delegate = self
         carsCollectionView.dataSource = self
         carsCollectionView.translatesAutoresizingMaskIntoConstraints = false
+        if #available(iOS 13.0, *) {
+            carsCollectionView.backgroundColor = .systemBackground
+        } else {
+            carsCollectionView.backgroundColor = .systemBackgroundPre13
+        }
         self.view.addSubview(carsCollectionView)
         carsCollectionView.autoPinEdge(.top, to: .bottom, of: filterView)
         carsCollectionView.autoPinEdge(toSuperviewMargin: .left, withInset: 0)
@@ -209,8 +211,17 @@ extension CarsListViewController: UICollectionViewDataSource {
         
         self.viewModel.access(row: row)
         
+        let pos = row % 3
+        var cellSize: DetailSize
+        
+        if (pos == 2) {
+            cellSize = .large
+        } else {
+            cellSize = .small
+        }
+
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: CarCollectionViewCell.self), for: indexPath) as! CarCollectionViewCell
-        cell.bind(viewModel, row:row)
+        cell.bind(viewModel, row:row, size:cellSize)
         
         return cell
     }
@@ -233,18 +244,21 @@ extension CarsListViewController: UICollectionViewDelegateFlowLayout {
         
         let pos = row % 3
         
-        var width:CGFloat
+        var width: CGFloat
+        var cellSize: DetailSize
         
         if (pos == 2) {
+            cellSize = .large
             width = collectionView.frame.size.width
         } else {
+            cellSize = .small
             width = collectionView.frame.size.width / 2.0
         }
         
-        let height = (width * 3.0) / 2.0
+        var height = (width * 2.0) / 3.0
+        height += CarDetailView.detailTextHeight(size: cellSize)
 
-        return CGSize(width: width, height: height)
-
+        return CGSize(width: width, height: ceil(height))
     }
 }
 

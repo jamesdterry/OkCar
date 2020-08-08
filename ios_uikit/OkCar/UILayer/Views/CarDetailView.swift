@@ -10,6 +10,11 @@ import UIKit
 import PureLayout
 import Kingfisher
 
+enum DetailSize {
+    case small
+    case large
+}
+
 class CarDetailView: UIView {
     let makeModelLabel = UILabel()
     let locationLabel = UILabel()
@@ -106,7 +111,7 @@ class CarDetailView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
-    func bind(_ car: CarModel) {
+    func bind(_ car: CarModel, size: DetailSize) {
         let url = URL(string: car.media[0])
         let processor = DownsamplingImageProcessor(size: self.bounds.size)
                      |> RoundCornerImageProcessor(cornerRadius: 20)
@@ -130,6 +135,12 @@ class CarDetailView: UIView {
             }
         }
         
+        let font = size == .large ? Style.sharedInstance.largeDetailFont() : Style.sharedInstance.smallDetailFont()
+        makeModelLabel.font = font
+        locationLabel.font = font
+        priceLabel.font = font
+        mileageLabel.font = font
+
         makeModelLabel.text = "\(car.make) \(car.model)"
         locationLabel.text = car.location
         
@@ -146,5 +157,19 @@ class CarDetailView: UIView {
         }
         
         mileageLabel.text = carMileageString
+    }
+    
+    static func detailTextHeight(size: DetailSize) -> CGFloat
+    {
+        var lineHeight: CGFloat = 0.0
+        
+        switch size {
+        case .small:
+            lineHeight = Style.sharedInstance.smallDetailLineHeight()
+        case .large:
+            lineHeight = Style.sharedInstance.largeDetailLineHeight()
+        }
+        
+        return lineHeight * 2.0
     }
 }

@@ -77,7 +77,7 @@ class CarDetailViewController: ScrollableContentViewController {
         annotation.coordinate = center
         carMapView.addAnnotation(annotation)
 
-        carDetailView.bind(car)
+        carDetailView.bind(car, size: .large)
     }
 
 }

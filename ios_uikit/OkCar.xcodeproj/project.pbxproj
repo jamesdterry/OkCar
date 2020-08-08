@@ -63,8 +63,6 @@
 		A7684FFD24CD40AE0086D921 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7684FFB24CD40AE0086D921 /* FilterView.swift */; };
 		A7684FFF24CD42DB0086D921 /* FilterSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7684FFE24CD42DB0086D921 /* FilterSheetViewController.swift */; };
 		A768500024CD42DB0086D921 /* FilterSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7684FFE24CD42DB0086D921 /* FilterSheetViewController.swift */; };
-		A768500224CD47360086D921 /* CarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A768500124CD47360086D921 /* CarTableViewCell.swift */; };
-		A768500324CD47360086D921 /* CarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A768500124CD47360086D921 /* CarTableViewCell.swift */; };
 		A76B0B2E24DEFA9E008F665F /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7684FDA24CD2FC60086D921 /* SignInViewController.swift */; };
 		A76B0B2F24DEFAD6008F665F /* ScrollableContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7684FDD24CD31760086D921 /* ScrollableContentViewController.swift */; };
 		A76B0B3024DEFAED008F665F /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7684FE724CD370D0086D921 /* CreateAccountViewController.swift */; };
@@ -83,6 +81,9 @@
 		A76B0B3E24DEFBE2008F665F /* CarDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7684FF524CD3B980086D921 /* CarDetailView.swift */; };
 		A76B0B3F24DF0A08008F665F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7E2D7AA24C3F6B300B39B56 /* Assets.xcassets */; };
 		A76B0B4024DF0A09008F665F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7E2D7AA24C3F6B300B39B56 /* Assets.xcassets */; };
+		A78A3A4C24DF15A0007E6FA7 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78A3A4B24DF15A0007E6FA7 /* Style.swift */; };
+		A78A3A4D24DF15A0007E6FA7 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78A3A4B24DF15A0007E6FA7 /* Style.swift */; };
+		A78A3A4E24DF15A0007E6FA7 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78A3A4B24DF15A0007E6FA7 /* Style.swift */; };
 		A7E2D7A224C3F6B000B39B56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E2D7A124C3F6B000B39B56 /* AppDelegate.swift */; };
 		A7E2D7A624C3F6B000B39B56 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E2D7A524C3F6B000B39B56 /* ViewController.swift */; };
 		A7E2D7A924C3F6B100B39B56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7E2D7A724C3F6B100B39B56 /* Main.storyboard */; };
@@ -136,8 +137,8 @@
 		A7684FF824CD3D600086D921 /* AddEditCarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditCarViewController.swift; sourceTree = "<group>"; };
 		A7684FFB24CD40AE0086D921 /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
 		A7684FFE24CD42DB0086D921 /* FilterSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterSheetViewController.swift; sourceTree = "<group>"; };
-		A768500124CD47360086D921 /* CarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarTableViewCell.swift; sourceTree = "<group>"; };
 		A76B0B3624DEFB66008F665F /* OkCarServiceRest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OkCarServiceRest.swift; sourceTree = "<group>"; };
+		A78A3A4B24DF15A0007E6FA7 /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		A7E2D79E24C3F6B000B39B56 /* OkCar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OkCar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7E2D7A124C3F6B000B39B56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A7E2D7A524C3F6B000B39B56 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -222,6 +223,7 @@
 		A7684FD924CD2FA60086D921 /* UILayer */ = {
 			isa = PBXGroup;
 			children = (
+				A78A3A4A24DF1589007E6FA7 /* Helpers */,
 				A7684FF424CD3B860086D921 /* Views */,
 				A7684FED24CD38880086D921 /* ViewModels */,
 				A7684FDA24CD2FC60086D921 /* SignInViewController.swift */,
@@ -257,10 +259,17 @@
 				A7684FF524CD3B980086D921 /* CarDetailView.swift */,
 				A7684FFB24CD40AE0086D921 /* FilterView.swift */,
 				A7684FFE24CD42DB0086D921 /* FilterSheetViewController.swift */,
-				A768500124CD47360086D921 /* CarTableViewCell.swift */,
 				A7443B5B24DA0F08009E9592 /* CarCollectionViewCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		A78A3A4A24DF1589007E6FA7 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A78A3A4B24DF15A0007E6FA7 /* Style.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		A7E2D79524C3F6B000B39B56 = {
@@ -577,11 +586,11 @@
 			files = (
 				A7684FFC24CD40AE0086D921 /* FilterView.swift in Sources */,
 				A7684FD224CD29420086D921 /* MockLocation.swift in Sources */,
-				A768500224CD47360086D921 /* CarTableViewCell.swift in Sources */,
 				A7684FEF24CD38A70086D921 /* CarsViewModel.swift in Sources */,
 				A7684FCE24CD28D00086D921 /* AppleLocation.swift in Sources */,
 				A7E2D7A624C3F6B000B39B56 /* ViewController.swift in Sources */,
 				A7443B5C24DA0F08009E9592 /* CarCollectionViewCell.swift in Sources */,
+				A78A3A4C24DF15A0007E6FA7 /* Style.swift in Sources */,
 				A7684FF224CD3A0A0086D921 /* CarDetailViewController.swift in Sources */,
 				A7684FC024C40C130086D921 /* SearchFilters.swift in Sources */,
 				A7684FE824CD370D0086D921 /* CreateAccountViewController.swift in Sources */,
@@ -612,6 +621,7 @@
 				A76B0B3224DEFB0C008F665F /* CarsListViewController.swift in Sources */,
 				A76B0B2F24DEFAD6008F665F /* ScrollableContentViewController.swift in Sources */,
 				A76B0B3324DEFB19008F665F /* CarsViewModel.swift in Sources */,
+				A78A3A4D24DF15A0007E6FA7 /* Style.swift in Sources */,
 				A76B0B3A24DEFBAB008F665F /* UIViewController+ShowError.swift in Sources */,
 				A7684FC124C40C130086D921 /* SearchFilters.swift in Sources */,
 				A76B0B3C24DEFBC8008F665F /* FilterSheetViewController.swift in Sources */,
@@ -644,6 +654,7 @@
 				A7684FDF24CD31760086D921 /* ScrollableContentViewController.swift in Sources */,
 				A7684FC224C40C130086D921 /* SearchFilters.swift in Sources */,
 				A7684FD024CD28D00086D921 /* AppleLocation.swift in Sources */,
+				A78A3A4E24DF15A0007E6FA7 /* Style.swift in Sources */,
 				A7684FF724CD3B980086D921 /* CarDetailView.swift in Sources */,
 				A768500024CD42DB0086D921 /* FilterSheetViewController.swift in Sources */,
 				A7684FBE24C40B6D0086D921 /* OkCarServiceProtocol.swift in Sources */,
@@ -651,7 +662,6 @@
 				A7684FCC24CD27A70086D921 /* OkCarLocationProtocol.swift in Sources */,
 				A7684FD424CD29420086D921 /* MockLocation.swift in Sources */,
 				A7684FB524C4090B0086D921 /* CarModel.swift in Sources */,
-				A768500324CD47360086D921 /* CarTableViewCell.swift in Sources */,
 				A7684FD824CD2CA80086D921 /* DependencyContainer.swift in Sources */,
 				A7684FB924C4091F0086D921 /* UserModel.swift in Sources */,
 				A76B0B3924DEFB66008F665F /* OkCarServiceRest.swift in Sources */,

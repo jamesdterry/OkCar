@@ -28,8 +28,8 @@ class CarCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 
-    func bind(_ carViewModel: CarsViewModel, row: Int) {
+    func bind(_ carViewModel: CarsViewModel, row: Int, size: DetailSize) {
         let car = carViewModel.cars[row]
-        carDetailView.bind(car)
+        carDetailView.bind(car, size: size)
     }
 }
