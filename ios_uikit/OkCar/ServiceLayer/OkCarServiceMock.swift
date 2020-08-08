@@ -39,7 +39,8 @@ class OkCarServiceMock: OkCarServiceProtocol {
                             mileage: 30442,
                             price: 18999,
                             llat: 41.0,
-                            llong: -83.0)
+                            llong: -83.0,
+                            media: [""])
         
         carDict[car1.storageId!] = car1
         

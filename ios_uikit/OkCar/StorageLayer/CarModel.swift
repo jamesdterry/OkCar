@@ -20,4 +20,5 @@ struct CarModel: Equatable {
     let price: Int
     let llat: Double
     let llong: Double
+    let media: [String]
 }
