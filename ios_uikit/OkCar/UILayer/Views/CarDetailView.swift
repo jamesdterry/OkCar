@@ -102,7 +102,8 @@ class CarDetailView: UIView {
         addSubview(mileageLabel)
         mileageLabel.autoPinEdge(.top, to: .bottom, of: priceLabel)
         mileageLabel.autoPinEdge(toSuperviewMargin: .trailing)
-        
+        mileageLabel.autoPinEdge(toSuperviewMargin: .bottom)
+
         locationLabel.autoAlignAxis(.horizontal, toSameAxisOf: mileageLabel)
     }
 

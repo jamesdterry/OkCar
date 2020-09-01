@@ -55,7 +55,7 @@ class SearchFilters {
     }
     
     public var describeMileage: String {
-        switch price.compare {
+        switch mileage.compare {
             case .none:
                 return ": Any"
             case .greaterThan:

@@ -256,7 +256,7 @@ extension CarsListViewController: UICollectionViewDelegateFlowLayout {
         }
         
         var height = (width * 2.0) / 3.0
-        height += CarDetailView.detailTextHeight(size: cellSize)
+        height += CarDetailView.detailTextHeight(size: cellSize) + 2
 
         return CGSize(width: width, height: ceil(height))
     }
