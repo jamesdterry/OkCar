@@ -12,6 +12,8 @@ protocol ViewControllerFactory {
     func switchToTabController()
     func switchToLoginController()
     func makRootViewController() -> UIViewController
+    func makeForSaleViewController() -> ForSaleViewController
+    func makeSettingsViewController() -> SettingsViewController
     func makeSigninViewController() -> SignInViewController
     func makeCreateAccountViewController() -> CreateAccountViewController
     func makeCarsListViewController() -> CarsListViewController
@@ -41,18 +43,34 @@ extension DependencyContainer: ViewControllerFactory {
         
         UIView.transition(with: mainWindow, duration: 0.5, options: options, animations:{ mainWindow.rootViewController = vc }, completion: nil)
     }
-    
-    func switchToTabController() {
+
+    private func buildTabBarController() -> UITabBarController {
         let tabbarController = UITabBarController()
-        
+
+        let forSaleController = ForSaleViewController(container: self)
+        let forSaleNavigationController = UINavigationController(rootViewController: forSaleController)
+        let forSaleTab = UITabBarItem(title: "Sell your car", image: UIImage(named: "forsale_tab.png"), selectedImage: UIImage(named: "forsale_tab.png"))
+        forSaleNavigationController.tabBarItem = forSaleTab
+
         let carListController = CarsListViewController(container: self)
         let carNavigationController = UINavigationController(rootViewController: carListController)
-
         let carListTab = UITabBarItem(title: "Cars", image: UIImage(named: "car_tab.png"), selectedImage: UIImage(named: "car_tab.png"))
         carNavigationController.tabBarItem = carListTab
         
-        tabbarController.viewControllers = [carNavigationController]
+        let settingsController = SettingsViewController(container: self)
+        let settingsNavigationController = UINavigationController(rootViewController: settingsController)
+        let settingsTab = UITabBarItem(title: "Settings", image: UIImage(named: "settings_tab.png"), selectedImage: UIImage(named: "settings_tab.png"))
+        settingsNavigationController.tabBarItem = settingsTab
+        
+        tabbarController.viewControllers = [forSaleNavigationController, carNavigationController, settingsNavigationController]
+        tabbarController.selectedIndex = 1
 
+        return tabbarController
+    }
+    
+    func switchToTabController() {
+        let tabbarController = buildTabBarController()
+        
         gotoUIViewTransition(tabbarController, options:UIView.AnimationOptions.transitionFlipFromLeft)
     }
     
@@ -68,24 +86,23 @@ extension DependencyContainer: ViewControllerFactory {
         let carService = self.getCarService()
         
         if let _ = carService.currentUser() {
-            let tabbarController = UITabBarController()
-            
-            let carListController = CarsListViewController(container: self)
-            let carNavigationController = UINavigationController(rootViewController: carListController)
-
-            let carListTab = UITabBarItem(title: "Cars", image: UIImage(named: "car_tab.png"), selectedImage: UIImage(named: "car_tab.png"))
-            carNavigationController.tabBarItem = carListTab
-            
-            tabbarController.viewControllers = [carNavigationController]
-            
+            let tabbarController = buildTabBarController()
             return tabbarController
         } else {
             let firstController = SignInViewController(container: self)
             let navigationController = UINavigationController(rootViewController: firstController)
             return navigationController
         }
-        
-        
+    }
+
+    func makeForSaleViewController() -> ForSaleViewController
+    {
+        return ForSaleViewController(container: self)
+    }
+    
+    func makeSettingsViewController() -> SettingsViewController
+    {
+        return SettingsViewController(container: self)
     }
     
     func makeSigninViewController() -> SignInViewController

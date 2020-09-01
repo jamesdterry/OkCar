@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		3C15AA6F7FA39B5F7A73C0F7 /* Pods_OkCarTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB4B94A982A17F5787B96201 /* Pods_OkCarTests.framework */; };
 		A622A1BCF7B8094A6AB887E0 /* Pods_OkCar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC5C97EAEC73291B2C2BDA63 /* Pods_OkCar.framework */; };
+		A7039EB524FEF4030014038A /* ForSaleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7039EB424FEF4030014038A /* ForSaleViewController.swift */; };
+		A7039EB624FEF4030014038A /* ForSaleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7039EB424FEF4030014038A /* ForSaleViewController.swift */; };
+		A7039EB724FEF4030014038A /* ForSaleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7039EB424FEF4030014038A /* ForSaleViewController.swift */; };
+		A7039EB924FEF4100014038A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7039EB824FEF4100014038A /* SettingsViewController.swift */; };
+		A7039EBA24FEF4100014038A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7039EB824FEF4100014038A /* SettingsViewController.swift */; };
+		A7039EBB24FEF4100014038A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7039EB824FEF4100014038A /* SettingsViewController.swift */; };
 		A7443B5C24DA0F08009E9592 /* CarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7443B5B24DA0F08009E9592 /* CarCollectionViewCell.swift */; };
 		A7443B5D24DA0F08009E9592 /* CarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7443B5B24DA0F08009E9592 /* CarCollectionViewCell.swift */; };
 		A7684FB324C4090B0086D921 /* CarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7684FB224C4090B0086D921 /* CarModel.swift */; };
@@ -114,6 +120,8 @@
 		3DBCFA285C435A1139F9444E /* Pods-OkCarTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OkCarTests.release.xcconfig"; path = "Target Support Files/Pods-OkCarTests/Pods-OkCarTests.release.xcconfig"; sourceTree = "<group>"; };
 		97C470EE504D10CFEC86E39A /* Pods-OkCar-OkCarUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OkCar-OkCarUITests.debug.xcconfig"; path = "Target Support Files/Pods-OkCar-OkCarUITests/Pods-OkCar-OkCarUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A5F83F5B0634237ACE0B2A5F /* Pods-OkCar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OkCar.release.xcconfig"; path = "Target Support Files/Pods-OkCar/Pods-OkCar.release.xcconfig"; sourceTree = "<group>"; };
+		A7039EB424FEF4030014038A /* ForSaleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForSaleViewController.swift; sourceTree = "<group>"; };
+		A7039EB824FEF4100014038A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		A7443B5B24DA0F08009E9592 /* CarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarCollectionViewCell.swift; sourceTree = "<group>"; };
 		A7684FB224C4090B0086D921 /* CarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarModel.swift; sourceTree = "<group>"; };
 		A7684FB624C4091F0086D921 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
@@ -232,6 +240,8 @@
 				A7684FEA24CD38170086D921 /* CarsListViewController.swift */,
 				A7684FF124CD3A0A0086D921 /* CarDetailViewController.swift */,
 				A7684FF824CD3D600086D921 /* AddEditCarViewController.swift */,
+				A7039EB424FEF4030014038A /* ForSaleViewController.swift */,
+				A7039EB824FEF4100014038A /* SettingsViewController.swift */,
 			);
 			path = UILayer;
 			sourceTree = "<group>";
@@ -585,6 +595,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7684FFC24CD40AE0086D921 /* FilterView.swift in Sources */,
+				A7039EB524FEF4030014038A /* ForSaleViewController.swift in Sources */,
 				A7684FD224CD29420086D921 /* MockLocation.swift in Sources */,
 				A7684FEF24CD38A70086D921 /* CarsViewModel.swift in Sources */,
 				A7684FCE24CD28D00086D921 /* AppleLocation.swift in Sources */,
@@ -606,6 +617,7 @@
 				A7684FDB24CD2FC60086D921 /* SignInViewController.swift in Sources */,
 				A7684FBC24C40B6D0086D921 /* OkCarServiceProtocol.swift in Sources */,
 				A7684FB324C4090B0086D921 /* CarModel.swift in Sources */,
+				A7039EB924FEF4100014038A /* SettingsViewController.swift in Sources */,
 				A76B0B3724DEFB66008F665F /* OkCarServiceRest.swift in Sources */,
 				A7684FF624CD3B980086D921 /* CarDetailView.swift in Sources */,
 				A7684FC424C40E440086D921 /* OkCarServiceMock.swift in Sources */,
@@ -626,6 +638,7 @@
 				A7684FC124C40C130086D921 /* SearchFilters.swift in Sources */,
 				A76B0B3C24DEFBC8008F665F /* FilterSheetViewController.swift in Sources */,
 				A7684FCF24CD28D00086D921 /* AppleLocation.swift in Sources */,
+				A7039EB624FEF4030014038A /* ForSaleViewController.swift in Sources */,
 				A76B0B3B24DEFBBA008F665F /* FilterView.swift in Sources */,
 				A76B0B3D24DEFBD4008F665F /* CarCollectionViewCell.swift in Sources */,
 				A76B0B3E24DEFBE2008F665F /* CarDetailView.swift in Sources */,
@@ -642,6 +655,7 @@
 				A7684FC524C40E440086D921 /* OkCarServiceMock.swift in Sources */,
 				A7684FC824C4135A0086D921 /* ServiceTests.swift in Sources */,
 				A76B0B3824DEFB66008F665F /* OkCarServiceRest.swift in Sources */,
+				A7039EBA24FEF4100014038A /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -658,6 +672,7 @@
 				A7684FF724CD3B980086D921 /* CarDetailView.swift in Sources */,
 				A768500024CD42DB0086D921 /* FilterSheetViewController.swift in Sources */,
 				A7684FBE24C40B6D0086D921 /* OkCarServiceProtocol.swift in Sources */,
+				A7039EB724FEF4030014038A /* ForSaleViewController.swift in Sources */,
 				A7684FFD24CD40AE0086D921 /* FilterView.swift in Sources */,
 				A7684FCC24CD27A70086D921 /* OkCarLocationProtocol.swift in Sources */,
 				A7684FD424CD29420086D921 /* MockLocation.swift in Sources */,
@@ -674,6 +689,7 @@
 				A7684FE324CD33FD0086D921 /* UIColor+Extension.swift in Sources */,
 				A7E2D7C424C3F6B300B39B56 /* OkCarUITests.swift in Sources */,
 				A7684FC624C40E440086D921 /* OkCarServiceMock.swift in Sources */,
+				A7039EBB24FEF4100014038A /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
