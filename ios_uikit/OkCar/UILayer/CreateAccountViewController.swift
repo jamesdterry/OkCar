@@ -121,8 +121,7 @@ class CreateAccountViewController: ScrollableContentViewController {
             switch result {
             case .success(let user):
                 if let _ = user {
-                    let carsListViewController = self.container.makeCarsListViewController()
-                    self.navigationController?.setViewControllers([carsListViewController], animated: true)
+                    self.container.switchToTabController()
                 } else {
                     assert(false, "Null error from signup")
                 }

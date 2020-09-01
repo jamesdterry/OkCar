@@ -9,7 +9,9 @@
 import UIKit
 
 protocol ViewControllerFactory {
-    func makRootViewController() -> UINavigationController
+    func switchToTabController()
+    func switchToLoginController()
+    func makRootViewController() -> UIViewController
     func makeSigninViewController() -> SignInViewController
     func makeCreateAccountViewController() -> CreateAccountViewController
     func makeCarsListViewController() -> CarsListViewController
@@ -33,21 +35,57 @@ class DependencyContainer {
 }
 
 extension DependencyContainer: ViewControllerFactory {
-    func makRootViewController() -> UINavigationController {
+    private func gotoUIViewTransition(_ vc:UIViewController, options:UIView.AnimationOptions)
+    {
+        let mainWindow = UIApplication.shared.windows.filter {$0.isKeyWindow}.first!
+        
+        UIView.transition(with: mainWindow, duration: 0.5, options: options, animations:{ mainWindow.rootViewController = vc }, completion: nil)
+    }
+    
+    func switchToTabController() {
+        let tabbarController = UITabBarController()
+        
+        let carListController = CarsListViewController(container: self)
+        let carNavigationController = UINavigationController(rootViewController: carListController)
+
+        let carListTab = UITabBarItem(title: "Cars", image: UIImage(named: "car_tab.png"), selectedImage: UIImage(named: "car_tab.png"))
+        carNavigationController.tabBarItem = carListTab
+        
+        tabbarController.viewControllers = [carNavigationController]
+
+        gotoUIViewTransition(tabbarController, options:UIView.AnimationOptions.transitionFlipFromLeft)
+    }
+    
+    func switchToLoginController() {
+        let firstController = SignInViewController(container: self)
+        let loginNavigationController = UINavigationController(rootViewController: firstController)
+
+        gotoUIViewTransition(loginNavigationController, options:UIView.AnimationOptions.transitionFlipFromRight)
+    }
+    
+    func makRootViewController() -> UIViewController {
         
         let carService = self.getCarService()
         
-        var firstController: UIViewController
-        
         if let _ = carService.currentUser() {
-            firstController = CarsListViewController(container: self)
+            let tabbarController = UITabBarController()
+            
+            let carListController = CarsListViewController(container: self)
+            let carNavigationController = UINavigationController(rootViewController: carListController)
+
+            let carListTab = UITabBarItem(title: "Cars", image: UIImage(named: "car_tab.png"), selectedImage: UIImage(named: "car_tab.png"))
+            carNavigationController.tabBarItem = carListTab
+            
+            tabbarController.viewControllers = [carNavigationController]
+            
+            return tabbarController
         } else {
-            firstController = SignInViewController(container: self)
+            let firstController = SignInViewController(container: self)
+            let navigationController = UINavigationController(rootViewController: firstController)
+            return navigationController
         }
         
-        let navigationController = UINavigationController(rootViewController: firstController)
         
-        return navigationController
     }
     
     func makeSigninViewController() -> SignInViewController

@@ -180,8 +180,7 @@ class CarsListViewController: UIViewController {
     @objc func logoutButtonTappped() {
         carService.logout()
         
-        let signinViewController = container.makeSigninViewController()
-        self.navigationController?.setViewControllers([signinViewController], animated: false)
+        self.container.switchToLoginController()
     }
     
     @objc func addButtonTappped() {

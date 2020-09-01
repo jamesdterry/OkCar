@@ -167,9 +167,8 @@ class SignInViewController: ScrollableContentViewController {
                 
                 switch result {
                 case .success(let user):
-                    if let user = user {
-                        let carsListViewController = self.container.makeCarsListViewController()
-                        self.navigationController?.setViewControllers([carsListViewController], animated: true)
+                    if user != nil {
+                        self.container.switchToTabController()
                     } else {
                         assert(false, "Null error from login")
                     }
