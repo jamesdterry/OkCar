@@ -242,4 +242,9 @@ class OkCarServiceMock: OkCarServiceProtocol {
     {
         completion(.success(true))
     }
+    
+    func updatePassword(password: String, completion: @escaping (Result<Bool, ServiceError>) -> Void) {
+        completion(.success(true))
+    }
+
 }

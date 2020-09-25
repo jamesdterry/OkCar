@@ -26,6 +26,7 @@ protocol OkCarServiceProtocol {
     func login(email: String, password: String, completion: @escaping (Result<UserModel?, ServiceError>) -> Void)
     func signup(email: String, password: String, completion: @escaping (Result<UserModel?, ServiceError>) -> Void)
     func forgotPassword(email: String, completion: @escaping (Result<Bool, ServiceError>) -> Void)
+    func updatePassword(password: String, completion: @escaping (Result<Bool, ServiceError>) -> Void)
 
     func logout()
     

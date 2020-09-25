@@ -62,22 +62,7 @@ class CarsListViewController: UIViewController {
         if title == nil {
             title = "Cars"
         }
-        
-        if #available(iOS 13.0, *) {
-            let leftButtonItem = UIBarButtonItem.init(
-                  image: UIImage(systemName: "shield.slash"),
-                  style: .plain,
-                  target: self,
-                  action: #selector(logoutButtonTappped)
-            )
-            leftButtonItem.accessibilityLabel = NSLocalizedString("Logout", comment: "Logout")
-            self.navigationItem.leftBarButtonItem = leftButtonItem
-        } else {
-            let leftButtonItem = UIBarButtonItem.init(barButtonSystemItem: .done, target: self, action: #selector(logoutButtonTappped))
-            leftButtonItem.accessibilityLabel = NSLocalizedString("Logout", comment: "Logout")
-            self.navigationItem.leftBarButtonItem = leftButtonItem
-        }
-            
+                    
         filterView.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(filterView)
         filterView.autoPinEdge(toSuperviewMargin: .top, withInset: 0)

@@ -25,6 +25,9 @@ class OkCarServiceRest: OkCarServiceProtocol {
     func forgotPassword(email: String, completion: @escaping (Result<Bool, ServiceError>) -> Void) {
     }
     
+    func updatePassword(password: String, completion: @escaping (Result<Bool, ServiceError>) -> Void) {
+    }
+    
     func logout() {
     }
     
